@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F You Token</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/message-loader.css" />
+<style>
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif
+}
+body,
+html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("assets/images/moon.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<style media="screen" type="text/css">
+.fade-out {
+    -webkit-animation-name: fade-out-anim;
+    -webkit-animation-duration: 3s;
+    animation-name: fade-out-anim;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+@-webkit-keyframes fade-out-anim {
+    0 {
+        -webkit-transform: scale(1.0);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: scale(0.1);
+        opacity: 0
+    }
+}
+@keyframes fade-out-anim {
+    0 {
+        transform: scale(1.0);
+        opacity: 1
+    }
+    100% {
+        transform: scale(0.1);
+        opacity: 0
+    }
+}
+.pastel-green {
+    background-color: #85c734;
+}
+
+.spinner-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.spinner-loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+.quote-wrapper {
+    position: relative;
+    height: 65%;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.quote {
+    overflow: scroll;
+    height: 100%;
+    padding-bottom: 0.5em;
+    /*background-color: rgba(238, 238, 238, 0.75);*/
+    
+    background-color: #85c734;
+    border-radius: 25px;
+    -webkit-box-shadow: -20px 25px 25px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -20px 25px 25px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: -20px 25px 25px 0px rgba(0, 0, 0, 0.54);
+}
+.quote .quote-text {
+    padding: 15px;
+    color: #000000;
+    font-style: italic;
+    font-weight: 100;
+    zoom: 1;
+    font-size: 14px
+}
+.quote .quote-link {
+    display: block;
+    border-top: 1px dotted #4d4d4d;
+    color: #BB221B;
+    font-size: 1em;
+    font-size: 15px;
+    text-align: center;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fyt-modal-responsive {
+    overflow: scroll; 
+    height: 150px; 
+    position: relative; 
+    width: 400px;
+}
+/*Set width as percentage for mobile devices*/
+@media screen and (max-device-width: 640px) {
+    .fyt-modal-responsive {
+        width: 85%;
+    }
+}
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="assets/images/FYT.png" style="width:71px; height: 27px;"></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button"><i class="fas fa-th"></i> ABOUT</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="#buy" class="w3-bar-item w3-button"><i class="fas fa-dollar-sign"></i> TOKEN SALE</a>
+                <a href="#info" class="w3-bar-item w3-button"><i class="fas fa-info-circle"></i> INFO</a>
+                <a href="#display" class="w3-bar-item w3-button"><i class="fas fa-desktop"></i> DISPLAY</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#buy" onclick="w3_close()" class="w3-bar-item w3-button">TOKEN SALE</a>
+        <a href="#info" onclick="w3_close()" class="w3-bar-item w3-button">INFO</a>
+        <a href="#display" onclick="w3_close()" class="w3-bar-item w3-button">DISPLAY</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span id="main-header" class="w3-jumbo w3-hide-small">F You Token</span>
+            <br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">F You Token</span>
+            <br>
+            <span class="w3-large">Bitch on them crappy ICO's!</span>
+            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">When Moon Then Lambo Else FUD</a>
+            </p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fab fa-facebook-square w3-hover-opacity"></i>
+            <i class="fab fa-instagram w3-hover-opacity"></i>
+            <i class="fab fa-snapchat-square w3-hover-opacity"></i>
+            <i class="fab fa-pinterest-square w3-hover-opacity"></i>
+            <i class="fab fa-twitter-square w3-hover-opacity"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding:50px 16px 128px 16px" id="about">
+        <h3 class="w3-center">ABOUT F YOU TOKEN</h3>
+        <p class="w3-center w3-large">Key differentiators from your average shitcoin</p>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i class="fas fa-moon w3-text-blue w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">When Moon</p>
+                <p>FYT token will solve world hunger<b>,</b> relativity theory's shortcomings, interplanetory travel and that small problem of consciousness<b>.</b>
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-rocket w3-text-orange w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Lambo Rocket</p>
+                <p>Using our patented <b>proof-of-moon</b> algorithm<b>,</b> we are able to deterministically settle transactions at faster than light speed<b>.</b>
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-gem w3-text-red w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Tokens are forever</p>
+                <p>With this non-fungible ERC721 token we have created<b>,</b> you can drive your lambo on the moon<b>.</b> This is not an ICO. It is a UFO<b>.</b>
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-dollar-sign w3-text-green w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Investment</p>
+                <p>Every F You Token is unique<b>.</b> Just get sworn-at by famous people on the block chain<b>.</b> Auction off those famous tokens<b>.</b> Get rich!
+                </p>
+            </div>
+        </div>
+        <div class="w3-center w3-large" style="padding-top: 25px">
+            <p><a href="#info" class="w3-button w3-black"><i class="fas fa-info-circle"> </i>More Info</a>
+        </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+        <div class="w3-quarter w3-text-blue">
+            <span class="w3-xxlarge">2000000</span>
+            <br>F You Tokens
+        </div>
+        <div class="w3-quarter w3-text-orange">
+            <span class="w3-xxlarge">1</span>
+            <br>Pissed Developer
+        </div>
+        <div class="w3-quarter w3-text-red">
+            <span class="w3-xxlarge">0</span>
+            <br>Happy Clients
+        </div>
+        <div class="w3-quarter w3-text-green">
+            <span class="w3-xxlarge">10000000000+</span>
+            <br>A-Holes on the planet
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:50px 16px 128px 16px" id="team">
+        <h3 class="w3-center">TEAM</h3>
+        <p class="w3-center w3-large">Our award winning team of high intellectuals</p>
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/trump.jpg" alt="Trump" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Donald Pump</h3>
+                        <p class="w3-opacity">CEO & Founder</p>
+                        <p>D's motto is to make blockchain great again<b>.</b> This token is a testament to his grand unknown vision<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/zombie.jpg" alt="zombie" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Vegan Non-GMO</h3>
+                        <p class="w3-opacity">Brain Test Engineer</p>
+                        <p>Blockchain community attracts the best brains in the industry<b>.</b> Brains attract this special test engineer<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/gorilla.jpg" alt="Gorilla" style="width:100%;height: auto;">
+                    <div class="w3-container">
+                        <h3>Star Developer</h3>
+                        <p class="w3-opacity">Blockchain Nut</p>
+                        <p>Lost his shirt betting on shit coins and ICO's<b>.</b> Currently working his ass off to repeat the cycle of misery<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/hillary.jpg" alt="Hillary" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Hillary Dump</h3>
+                        <p class="w3-opacity">Wannabe CEO</p>
+                        <p>Knows(it all) how to solve world hunger<b>.</b> She is still recovering from the trauma of the last pump and dump<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 75px">
+            <h3 class="w3-center">ADVISORS</h3>
+            <p class="w3-center w3-large">Our out-of-the-world advisors</p>
+        </div>
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/gandhi-smiling.jpg" alt="Gandhi" style="width:100%">
+                    <div class="w3-container">
+                        <h3>DAO Consultant</h3>
+                        <p class="w3-opacity">Decentralization Village</p>
+                        <p>Has experience in executing nation scale affirmative change<b>.</b> Inventor of decentralization<b>.</b> Hero of the masses<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/spock.jpg" alt="Spock" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Genius Prime</h3>
+                        <p class="w3-opacity">Interplanetary Savant</p>
+                        <p>Has invaluable expertise in solving interplanetary travel<b>.</b> He is our brain test engineer's ultimate wet dream<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/darth-vader.jpg" alt="Darth Vader" style="width:100%;height: auto;">
+                    <div class="w3-container">
+                        <h3>Angel Investor</h3>
+                        <p class="w3-opacity">Son of Wallstreet</p>
+                        <p>Banker<b>.</b> In his name is this project funded. Chief motivator with his aggressive, take no prisoners attitude<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="assets/images/einstein.jpg" alt="Einstein" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Blockchain Scientist</h3>
+                        <p class="w3-opacity">Black Hole</p>
+                        <p>Invented our proof-of-moon algorithm<b>.</b> Working hard to sort some kinks out<b>.</b> Shit freaks out at quantum level apparently<b>.</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Token sale section -->
+    <div class="w3-container w3-center w3-dark-grey" style="padding:50px 16px 128px 16px" id="buy">
+        <h3>WRITE GRAFFITI ON THE BLOCKCHAIN</h3>
+        <p class="w3-large">Choose a fuck that fits your needs</p>
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-third w3-section">
+                <div class="w3-khaki">
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-black w3-xlarge w3-padding-32">fYou Graffiti</li>
+                    </ul>
+                    <div class="w3-border">
+                        <form id="fYouForm" class="w3-container">
+                            <div class="w3-section">
+                                <textarea class="w3-input w3-white" name="message" placeholder="NEO is a shitcoin"></textarea>
+                                <label>Graffiti message for the ages</label>
+                            </div>
+                            <div class="w3-section">
+                                <input class="w3-input" type="text" name="url" placeholder="http://some-img-url.com or IPFS hash like: QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG">
+                                <label>URL or IPFS Hash</label>
+                            </div>
+                            <div class="w3-section">
+                                <input class="w3-input" type="text" name="address" placeholder="0x9a59F8DfB62A12B8A14621E4FB2Cf04a0f246E18">
+                                <label>To (blockchain address)</label>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button pastel-green w3-padding-large" onclick="checkForMetaMask('fyt-modal', validateFYou, fYou)">Send a Fuck</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="fyt-modal" class="w3-modal">
+                    <div class="quote-wrapper fyt-modal-responsive">
+                        <span onclick="document.getElementById('fyt-modal').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <div class="quote" style="background-color: #ff9800 !important">
+                            <div id="fyt-modal-text" class="quote-text"></div>
+                            <div class="quote-link" style="color: #000000">
+                                <a href="https://metamask.io/" target="_blank">
+                                    Use Metamask, TrustWallet or other DApp Browser
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-khaki">
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-red w3-xlarge w3-padding-48">Giant FYou! Tokens in bulk</li>
+                    </ul>
+                    <div class="w3-border">
+                        <form id="giantFYouForm" class="w3-container">
+                            <div class="w3-section">
+                                <input class="w3-input" type="number" placeholder="10, something less than 11">
+                                <label>Number of FYT tokens</label>
+                            </div>
+
+                            <div class="w3-section">
+                                <input class="w3-input" type="text" placeholder="0x9a59F8DfB62A12B8A14621E4FB2Cf04a0f246E18">
+                                <label>To (blockchain address)</label>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button pastel-green w3-padding-large" onclick="checkForMetaMask('gfyt-modal', validateGiantFYou, giantFYou)">A Cluster Fuck</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="gfyt-modal" class="w3-modal">
+                    <div class="quote-wrapper fyt-modal-responsive">
+                        <span onclick="document.getElementById('gfyt-modal').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <div class="quote" style="background-color: #ff9800 !important">
+                            <div id="gfyt-modal-text" class="quote-text"></div>
+                            <div class="quote-link" style="color: #000000">
+                                <a href="https://metamask.io/" target="_blank">
+                                    Use Metamask, TrustWallet or other DApp Browser
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third w3-section">
+                <div class="w3-khaki">
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-black w3-xlarge w3-padding-32">Graffiti</li>
+                    </ul>
+                    <div class="w3-border">
+                        <form id="graffitiForm" class="w3-container">
+                            <div class="w3-section">
+                                <input class="w3-input" type="number" placeholder="25192">
+                                <label>Token Id (only enter token id's you own)</label>
+                            </div>
+                            <div class="w3-section">
+                                <textarea class="w3-input w3-white" name="message" placeholder="TRX is a total shit show!"></textarea>
+                                <label>Graffiti message for the ages</label>
+                            </div>
+                            <div class="w3-section">
+                                <input class="w3-input" type="text" placeholder="http://some-img-url.com or IPFS hash like: QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG">
+                                <label>URL or IPFS Hash</label>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="w3-ul w3-white w3-hover-shadow">
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button pastel-green w3-padding-large" onclick="checkForMetaMask('graffiti-modal', validatePaintGraffiti, paintGraffiti)">Bitch and Whine!</button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Modal window for showing erros, user login message -->
+                <div id="graffiti-modal" class="w3-modal">
+                    <div class="quote-wrapper fyt-modal-responsive">
+                        <span onclick="document.getElementById('graffiti-modal').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <div class="quote" style="background-color: #ff9800 !important">
+                            <div id="graffiti-modal-text" class="quote-text"></div>
+                            <div class="quote-link" style="color: #000000">
+                                <a href="https://metamask.io/" target="_blank">
+                                    Use Metamask, TrustWallet or other DApp Browser
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Display section-->
+    <div class="w3-container" style="padding:50px 16px 256px 16px" id="display">
+        <div class="w3-display-container">
+            <div id="web3-version"></div>
+            <div class="w3-center w3-large" style="padding-top: 25px">
+                <p><a id="displayButton" href="javascript:void(0)" class="w3-button w3-black" onclick="msgRenderer.togglePause()">Start Display</a>
+            </div>
+            <div id="own-msgs" class="w3-half w3-section" onmouseover="msgRenderer.removeFadeAnimation(msgRenderer.ownCardId)" onmouseout="msgRenderer.addFadeAnimation(msgRenderer.ownCardId)">
+
+            </div>
+            <div id="public-msgs" class="w3-half w3-section" onmouseover="msgRenderer.removeFadeAnimation(msgRenderer.publicCardId)" onmouseout="msgRenderer.addFadeAnimation(msgRenderer.publicCardId)">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Info Section -->
+    <div class="w3-container w3-light-grey" style="padding:50px 16px 128px 16px" id="info">
+        <h3 class="w3-center">FAQ ON F YOU TOKEN</h3>
+        <div class="w3-content w3-display-container">
+            <!-- Slide 1 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Ok, so what is this really about?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>A frustrated developer<b>.</b> Really, that is what caused this to be<b>.</b> Said developer lost money on ICO’s and decided to create a token whose sole purpose is to bitch and whine on the blockchain directly<b>.</b> A.k.a Graffiti for the ages<b>.</b> A self-examination of human greed which perpetuates said greed. All in all<b>,</b> a criticism of the human race<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How is it supposed to be used?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>It is an ERC721 token<b>,</b> so each token is unique and non-fungible<b>.</b> You can use it to scribble a permanent message all over the blockchain<b>,</b> hating upon the ICO that screwed you over<b>.</b> Anyone can then view your message with no recourse to changing it ever<b>.</b>
+                                </p>
+                                <p>
+                                    Apart from this<b>,</b> say Vitalik shows you the middle finger via this smart contract<b>,</b> then that specific token would be quite valuable and can be auctioned off<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Can I use it to hate upon my mother-in-law who does not have a crypto wallet address?</p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Yep<b>.</b> Put her name or email in the “message” and go commit your hara-kiri<b>.</b> However<b>,</b> it is a kind of misuse of the token’s purpose<b>.</b> Said purpose being to exclusively hate upon ICO’s who promise the moon and deliver dung<b>.</b> Purpose also being to register yourself as being dumb enough and greedy enough to believe said promise of shitty ICO<b>,</b> just like certain people we know<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Any other purpose?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>The sky is the limit<b>,</b> you can send a message and a link/IPFS hash<b>.</b> Anyone can then display them for free<b>.</b>
+                                </p>
+                                <p>Better still you can “burn” your token by sending it to the address of the ICO contract that did you in<b>.</b> Use the url/IPFS hash parameter for more colorful content which would forever be etched on the blockchain for all to see<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How do I bulk buy this token?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Hate much? Well<b>,</b> who are we to judge you<b>.</b> There is a smart contract function called “giantFYou” which does that and assigns tokens to whichever address you want it to<b>.</b> You can then use each of the tokens individually to shit all over the blockchain<b>.</b> Once your graffiti is scribbled, the smart contract will prevent any further modification<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How to Auction off a “Fuck You” I got from Vitalik?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>It is an ERC721 token, so you can approve and transfer it to anyone<b>.</b> If you need an escrow<b>,</b> we provide an auction contract(work in progress) where you can do the same<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>I am a nice guy, Can I use this for charity?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Wow! Maybe, rethink your life choices? But if you are serious enough you can do it<b>.</b> Get famous people to swear at your masochistic ass<b>,</b> then auction it off and send proceeds to charity<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Is it free?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>No<b>.</b> no<b>.</b> no<b>.</b> Said developer has to get back money that was lost in shit coins and lose it all over again<b>.</b> It is fixed at 1 finney per token(less than a buck<b>,</b> if Eth hasn’t crashed to fresh new lows as we write this)<b>.</b> Plus gas for the transaction<b>.</b> Gas increases as your message sizes increase<b>,</b> so try to limit yourself to a simple “Fuck You”... if you can<b>.</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How will it solve world hunger?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>That is a very technical question. Talk to our developers on twitter or other ‘mediums’. Read our whitepaper. Let us know if you understand (or even find) it. Cause we sure don’t.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Ok fine, what about interplanetary travel then?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>As mentioned in the description, we are not an ICO(Whom we hate upon) we are a UFO. And what do you think UFO’s are for? Did you at least check out our advisors and team?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How many tokens overall?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Limited to 2 million tokens. As you know, the world has far too many ICO’s and assholes for that figure to ever be enough. Best get your token asap and HODL.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How can I HODL?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>
+                                    There is a smart contract function called fYou, you can send it an empty message and empty url parameter and it will reserve a token for you. See, as simple as that. Or use giantFYou and reserve many, if you are from Wallstreet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>How is my venting on someone going to be immutable if I can transfer the token?
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>The token can be transferred, but the message and info url once written can no longer be altered. An event is generated on the blockchain, again something that cannot be altered. So, it is available to any UI sick enough to display your messages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>What is the future price prediction of this token?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Lambo on the moon... And half seriously, you need to get sworn at by someone really famous. No, your mother won't do, unless she is J. Lo or something.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="mySlides">
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Why all the hate? Can I use this for love?
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>Peace! You be zen. The message need not be one of hate, it can be of love, friendship, respect or whatever emotions you may have atm. It is Graffiti after all and you are the artist. The canvas is fresh and yours to illuminate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div style="overflow: scroll;height: 500px" class="w3-card w3-container w3-white">
+                            <header class="w3-container w3-hover-shadow w3-black">
+                                <p>Just fuck off already!
+                                    <br/><span style="visibility: hidden;">.</span>
+                                </p>
+                            </header>
+                            <div class="w3-container">
+                                <p>
+                                    <img src="assets/images/FYT.png">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="w3-button w3-black w3-opacity-max w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-opacity-max w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fab fa-facebook-square w3-hover-opacity"></i>
+            <i class="fab fa-instagram w3-hover-opacity"></i>
+            <i class="fab fa-snapchat-square w3-hover-opacity"></i>
+            <i class="fab fa-pinterest-square w3-hover-opacity"></i>
+            <i class="fab fa-twitter-square w3-hover-opacity"></i>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/web3.min.js"></script>
+
+    <!-- Add Scripts -->
+    <script>
+    window.addEventListener('load', function() {
+
+        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+        if (typeof web3 !== 'undefined') {
+            // Use Mist/MetaMask's provider
+            web3js = new Web3(web3.currentProvider);
+        } else {
+            console.log('No web3? You should consider trying MetaMask!')
+            // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+            web3js = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+        }
+        userAccount = web3js.eth.accounts[0];
+        // Check if account has changed and update it periodically
+        var accountInterval = setInterval(function() {
+            if (web3js.eth.accounts[0] !== userAccount) {
+                userAccount = web3js.eth.accounts[0];
+            }
+        }, 1000);
+
+        startApp();
+
+    })
+
+    function startApp() {
+        document.getElementById("web3-version").innerHTML = web3js.version.api;
+        var contract = web3js.eth.contract([
+                        {
+                            "anonymous": false,
+                            "inputs": [
+                                {
+                                    "indexed": true,
+                                    "name": "previousOwner",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": true,
+                                    "name": "newOwner",
+                                    "type": "address"
+                                }
+                            ],
+                            "name": "OwnershipTransferred",
+                            "type": "event"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "approve",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_schmuck",
+                                    "type": "address"
+                                },
+                                {
+                                    "name": "_clearTextMessageJustToBeSuperClear",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "_infoUrlOrIPFSHash",
+                                    "type": "string"
+                                }
+                            ],
+                            "name": "fYou",
+                            "outputs": [],
+                            "payable": true,
+                            "stateMutability": "payable",
+                            "type": "function"
+                        },
+                        {
+                            "anonymous": false,
+                            "inputs": [
+                                {
+                                    "indexed": true,
+                                    "name": "_owner",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": true,
+                                    "name": "_approved",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": false,
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "Approval",
+                            "type": "event"
+                        },
+                        {
+                            "anonymous": false,
+                            "inputs": [
+                                {
+                                    "indexed": true,
+                                    "name": "_from",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": true,
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": false,
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "Transfer",
+                            "type": "event"
+                        },
+                        {
+                            "anonymous": false,
+                            "inputs": [
+                                {
+                                    "indexed": true,
+                                    "name": "_from",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": true,
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "indexed": false,
+                                    "name": "_tokenIds",
+                                    "type": "uint256[]"
+                                }
+                            ],
+                            "name": "Transfer",
+                            "type": "event"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "name": "_numTokens",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "giantFYou",
+                            "outputs": [],
+                            "payable": true,
+                            "stateMutability": "payable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "name": "_clearTextMessageJustToBeSuperClear",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "_infoUrlOrIPFSHash",
+                                    "type": "string"
+                                }
+                            ],
+                            "name": "paintGraffiti",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "takeOwnership",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "transfer",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "newOwner",
+                                    "type": "address"
+                                }
+                            ],
+                            "name": "transferOwnership",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "inputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "constructor"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_to",
+                                    "type": "address"
+                                },
+                                {
+                                    "name": "_amount",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "withdrawFees",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "approvedFor",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "address"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_owner",
+                                    "type": "address"
+                                }
+                            ],
+                            "name": "balanceOf",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "getFeesAvailableForWithdraw",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "getGraffiti",
+                            "outputs": [
+                                {
+                                    "name": "message",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "infoUrlOrIPFSHash",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "name",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "pure",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "owner",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "address"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "ownerOf",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "address"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "symbol",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "pure",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "tokenHash",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "bytes32"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_tokenId",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "tokenMetadata",
+                            "outputs": [
+                                {
+                                    "name": "infoUrlOrIPFSHash",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "_owner",
+                                    "type": "address"
+                                }
+                            ],
+                            "name": "tokensOf",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256[]"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "totalSupply",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        }
+                    ]);
+        window.TokenInstance = contract.at('0x1fa48dd53f8300425f57621cf7b50d232e35e880'); // rinkeby
+        msgRenderer.init();
+        eventQueuer.init();
+        ownTokenGraffitiQueuer.init();
+    }
+
+    function fYou() {
+        var theForm = document.getElementById("fYouForm");
+        console.log(`From: ${web3js.eth.accounts[0]}`);
+        var tx = TokenInstance.fYou.sendTransaction(getAddress(theForm.elements[2].value), theForm.elements[0].value, theForm.elements[1].value, {
+            from: userAccount,
+            gas: 1000000,
+            gasPrice: web3js.toWei('2', 'gwei'),
+            value: web3js.toWei('1', 'finney')
+        }, function(err, resp) {
+            if (err) {
+                displayModal('fyt-modal', `Tx Errored out: ${JSON.stringify(err)}`);
+            } else {
+                console.log(`Response: ${JSON.stringify(resp)}`);
+            }
+        });
+        console.log(`${JSON.stringify(tx)}`);
+    }
+
+    function giantFYou() {
+        var theForm = document.getElementById("giantFYouForm");
+        var tx = TokenInstance.giantFYou.sendTransaction(getAddress(theForm.elements[1].value), theForm.elements[0].value, {
+                from: userAccount,
+                gas: 3000000,
+                gasPrice: web3js.toWei('2', 'gwei'),
+                value: web3js.toWei(theForm.elements[0].value.toString(), 'finney')
+            }, function(err, resp) {
+                if (err) {
+                    displayModal('gfyt-modal', `Tx Errored out: ${JSON.stringify(err)}`);
+                } else {
+                    console.log(`Response: ${JSON.stringify(resp)}`);
+                }
+            });
+        console.log(`${JSON.stringify(tx)}`);
+    }
+
+    function paintGraffiti() {
+        var theForm = document.getElementById("graffitiForm");
+        
+        var tx = TokenInstance.paintGraffiti.sendTransaction(theForm.elements[0].value, theForm.elements[1].value, theForm.elements[2].value, {
+                from: userAccount,
+                gas: 1000000,
+                gasPrice: web3js.toWei('2', 'gwei')
+            }, function(err, resp) {
+                if (err) {
+                    displayModal('graffiti-modal', `Tx Errored out: ${JSON.stringify(err)}`);
+                } else {
+                    console.log(`Response: ${JSON.stringify(resp)}`);
+                }
+            });
+        console.log(`${JSON.stringify(tx)}`);
+    }
+
+    function checkForMetaMask(id, validateFn, cb) {
+        var validationMsg;
+        web3js.eth.getAccounts(function(err, accounts){
+            if (err) {
+                displayModal(id, err.toString());
+            } else if (accounts.length == 0) {
+                displayModal(id, "User is not logged in to MetaMask/DApp browser");
+            } else if ((validationMsg = validateFn()).length > 0) {
+                displayModal(id, validationMsg);
+            } else {
+                // continue with call back;
+                cb();
+            }
+        });
+    }
+
+    function displayModal(id, errMsg) {
+        var modal = document.getElementById(id);
+        var textId = `${id}-text`;
+        document.getElementById(textId).innerHTML = errMsg;
+        modal.style.display = 'block';
+    }
+
+    function validateFYou() {
+        var theForm = document.getElementById("fYouForm");
+        if( web3js.isAddress(theForm.elements[2].value) && (theForm.elements[0].value || theForm.elements[1].value)) {
+            return '';
+        }
+        if(!web3js.isAddress(theForm.elements[2].value)) {
+            return `Invalid ethereum public address provided: ${theForm.elements[2].value}`;
+        }
+        return 'Please provide a non empty message or a url or ipfs hash';
+    }
+
+    function validateGiantFYou() {
+        var theForm = document.getElementById("giantFYouForm");
+        if( web3js.isAddress(theForm.elements[1].value) && theForm.elements[0].value > 0 && theForm.elements[0].value < 101) {
+            return '';
+        }
+        if(!web3js.isAddress(theForm.elements[1].value)) {
+            return `Invalid ethereum public address provided: ${theForm.elements[1].value}`;
+        }
+        return 'Please provide a value between 1 and 100';
+    }
+
+    function validatePaintGraffiti() {
+        var theForm = document.getElementById("graffitiForm");
+        if ((theForm.elements[0].value && theForm.elements[0].value > 0) && (theForm.elements[1].value || theForm.elements[2].value)) {
+            return '';
+        }
+        if(!theForm.elements[0].value || theForm.elements[0].value == 0) {
+            return 'Please provide a numeric non-zero value for token id';
+        }
+        return 'Please provide a non empty message or a url or ipfs hash';
+    }
+
+    function getAddress(addr) {
+        if(addr.startsWith('0x')) {
+            return addr;
+        } else {
+            return `0x${addr.toString()}`;
+        }
+    }
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+    function isValidURL(link) {
+        var a = document.createElement('a');
+        a.href = link;
+        return (a.host && a.host != window.location.host);
+    }
+
+    function arrayHasNonEmptyStrings(arr) {
+        var nonEmpty = false;
+        for(var i=0; i < arr.length; i++) {
+            if(arr[i]) {
+                nonEmpty = true;
+                break;
+            }
+        }
+        return nonEmpty;
+    }
+
+    function display() {
+        eventQueuer.start();
+        ownTokenGraffitiQueuer.start();
+    }
+
+    function fadeOutAnimationEndEventHandler() {
+        eventQueuer.invokeMsgRenderer();
+    }
+
+    function fadeOutAnimationEndEventHandlerO() {
+        ownTokenGraffitiQueuer.invokeMsgRenderer();
+    }
+
+    paused = true;
+    var msgRenderer = {
+        init: function() {
+            this.spinner = `
+            <div class="w3-card-4" style="width: 95%;overflow: scroll;height: 225px; position: relative">
+                <div class="quote-wrapper">
+                    <div class="quote">
+                        <div style="top: 50%; left: 50%; transform: translate(-50%, -50%); position: absolute;">
+                            <div class="spinner-loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            this.displayButton = document.getElementById("displayButton");
+            this.ownMsg = document.getElementById('own-msgs');
+            this.publicMsg = document.getElementById('public-msgs');
+            this.ownCardId = "own-card";
+            this.publicCardId = "public-card";
+        },
+        togglePause: function() {
+            paused = !paused;
+            if (paused) {
+                this.displayButton.innerHTML = "Start Display";
+                this.ownMsg.innerHTML = "";
+                this.publicMsg.innerHTML = "";
+            } else {
+                this.displayButton.innerHTML = "Stop this insanity!";
+                this.ownMsg.innerHTML = this.spinner;
+                this.publicMsg.innerHTML = this.spinner;
+                display();
+            }
+        },
+        render: function(cardId, tokenId, resp) {
+            if (paused) {
+                return;
+            }
+            var msg = resp[0];
+            var link = resp.length > 1 ? resp[1] : '';
+            if (!isValidURL(link) && link.length == 46) {
+                // it is an ipfs hash, append with ipfs hash
+                link = `https://ipfs.io/ipfs/${link}`;
+            }
+            //
+            if(cardId == this.publicCardId) {
+                this.publicMsg.innerHTML = this.msgTemplate(cardId, tokenId, msg, link);
+            } else {
+                this.ownMsg.innerHTML = this.msgTemplate(cardId, tokenId, msg, link);
+            }
+            this.addFadeAnimation(cardId);
+        },
+        msgTemplate: function(cardId, tokenId, msg, link) {
+            return `
+            <div class="w3-card-4" style="width: 95%;overflow: scroll;height: 225px">
+                <div id="${cardId}" class="quote-wrapper">
+                    <div class="quote">
+                        <div class="quote-text">${msg}</div>
+                        ${link ? `
+                        <div class="quote-link">
+                            <a href="${link}" target="_blank">
+                                Token ${tokenId} High Culture
+                            </a>
+                        </div>
+                        `: ``}
+                    </div>
+                </div>
+            </div>
+            `;
+        },
+        removeFadeAnimation: function(cardId) {
+            var theCard = document.getElementById(cardId);
+            if (theCard) {
+                if(msgRenderer.publicCardId == cardId) {
+                    theCard.removeEventListener("webkitAnimationEnd", fadeOutAnimationEndEventHandler);
+                    theCard.removeEventListener("animationend", fadeOutAnimationEndEventHandler);
+                } else {
+                    theCard.removeEventListener("webkitAnimationEnd", fadeOutAnimationEndEventHandlerO);
+                    theCard.removeEventListener("animationend", fadeOutAnimationEndEventHandlerO);
+                }
+                theCard.classList.remove("fade-out");
+            }
+        },
+        addFadeAnimation: function(cardId) {
+            var theCard = document.getElementById(cardId);
+            if (theCard && !theCard.classList.contains("fade-out")) {
+                if(msgRenderer.publicCardId == cardId) {
+                    theCard.addEventListener("webkitAnimationEnd", fadeOutAnimationEndEventHandler);
+                    theCard.addEventListener("animationend", fadeOutAnimationEndEventHandler);
+                } else {
+                    theCard.addEventListener("webkitAnimationEnd", fadeOutAnimationEndEventHandlerO);
+                    theCard.addEventListener("animationend", fadeOutAnimationEndEventHandlerO);
+                }
+                theCard.classList.add("fade-out");
+            }
+        }
+    };
+
+    var eventQueuer = {
+        init: function() {
+            this.TokenInstance = TokenInstance;
+            this.eventQueue = new Queue();
+            this.totalTokens = 0;
+            this.tokenId = 0;
+            this.initRendering = false;
+        },
+        start: function() {
+            if (paused) {
+                return;
+            }
+            this.initRendering = false;
+            this.tokenId = 0;
+            while (this.eventQueue.size() > 0) {
+                this.eventQueue.dequeue();
+            }
+            this.callTotalTokens(this.queueGraffiti);
+        },
+        callTotalTokens: function(cb) {
+            if (paused) {
+                return;
+            }
+            var self = this;
+            this.TokenInstance.totalSupply.call(function(err, resp) {
+                if (err) {
+                    console.log(`Errored out: ${JSON.stringify(err)}`)
+                } else {
+                    self.totalTokens = new Number(resp);
+                    var boundCb = cb.bind(self);
+                    boundCb();
+                }
+            });
+        },
+        queueGraffiti: function() {
+            if (paused) {
+                return;
+            }
+            var self = this;
+            if (self.eventQueue.size() > 5) {
+                return;
+            }
+            // if total tokens is 0, this loop is skipped.
+            for (var i = 0; i < (self.totalTokens > 5 ? 5 : self.totalTokens); i++) {
+                self.tokenId = self.tokenId - 1;
+                if (self.tokenId == -1) {
+                    // 0 indexed, so put in total tokens - 1 to token id.
+                    self.tokenId = self.totalTokens - 1;
+                };
+                // Immediately invoke the function passing in tokenId, otherwise closure always gets token id as 0.
+                var f = function(currTokenId) {
+                    self.TokenInstance.getGraffiti.call(currTokenId, function(err, resp) {
+                        if (err) {
+                            console.log(`Errored out: ${JSON.stringify(err)}`)
+                        } else {
+                            if(arrayHasNonEmptyStrings(resp)) {
+                                self.eventQueue.enqueue([currTokenId, resp]);
+                            } else {
+                                self.eventQueue.enqueue([currTokenId, [`Token: ${currTokenId} is reserved.`]]);
+                            }
+                            // only invoke for the first message
+                            if (!self.initRendering) {
+                                self.initRendering = true;
+                                self.invokeMsgRenderer();
+                            }
+                            
+                        }
+                    });
+                };
+                f(self.tokenId);
+            }
+
+        },
+        invokeMsgRenderer: function() {
+            if (paused) {
+                return;
+            }
+
+            var currentSize = this.eventQueue.size();
+            if (currentSize > 0) {
+                var obj = this.eventQueue.dequeue();
+                msgRenderer.render(msgRenderer.publicCardId, obj[0], obj[1]);
+                // if token id is 0, restart and call total tokens again.
+                if (obj[0] == 0) {
+                    var self = this;
+                    setTimeout(function () {self.start();}, 3000);
+                } else {
+                    // queue more if the queue size goes below 5. 
+                    if (currentSize < 5 && (this.totalTokens - obj[0]) >= 5) {
+                        this.queueGraffiti();
+                    }
+                }
+            } else {
+                this.queueGraffiti();
+            }
+        }
+    };
+
+    var ownTokenGraffitiQueuer = {
+        init: function() {
+            this.TokenInstance = TokenInstance;
+            this.eventQueue = new Queue();
+            this.tokens = [];
+            this.startTokenId = 0;
+            this.initRendering = false;
+        },
+        start: function() {
+            if (paused) {
+                return;
+            }
+            this.initRendering = false;
+            this.tokenId = 0;
+            while (this.eventQueue.size() > 0) {
+                this.eventQueue.dequeue();
+            }
+            this.callOwnTokens(this.queueGraffiti);
+        },
+        callOwnTokens: function(cb) {
+            if (paused) {
+                return;
+            }
+            var self = this;
+            this.TokenInstance.tokensOf.call(userAccount, function(err, resp) {
+                if (err) {
+                    console.log(`tokensOf call Errored out: ${JSON.stringify(err)}`)
+                } else {
+                    if(resp.length > 0) {
+                        self.initRendering = false;
+                        self.tokens = resp;
+                        self.startTokenId = resp[0];
+                        var boundCb = cb.bind(self);
+                        boundCb();
+                    } else {
+                        console.log(`Acccount: ${userAccount} has 0 tokens`);
+                    }
+                }
+            });
+        },
+        queueGraffiti: function() {
+            if (paused) {
+                return;
+            }
+            var self = this;
+            if (self.eventQueue.size() > 5) {
+                return;
+            }
+            // if total tokens is 0, this loop is skipped.
+            var arr = self.tokens.slice((self.tokens.length > 5) ? (self.tokens.length - 5): 0,  self.tokens.length);
+
+            // update tokens array to slice out the tokens we are displaying now.
+            if(self.tokens.length > 5) {
+                self.tokens = self.tokens.slice(0, self.tokens.length - 5);
+            } else {
+                self.tokens = [];
+            }
+            for (var i = arr.length - 1; i >= 0; i--) {
+                // Immediately invoke the function passing in tokenId, otherwise closure gets wrong token id.
+                var f = function(currTokenId) {
+                    self.TokenInstance.getGraffiti.call(currTokenId, function(err, resp) {
+                        if (err) {
+                            console.log(`Errored out: ${JSON.stringify(err)}`)
+                        } else {
+                            if(arrayHasNonEmptyStrings(resp)) {
+                                self.eventQueue.enqueue([currTokenId, resp]);
+                            } else {
+                                self.eventQueue.enqueue([currTokenId, [`Token: ${currTokenId} is reserved.`]]);
+                            }
+                            // only invoke for the first message
+                            if (!self.initRendering) {
+                                self.initRendering = true;
+                                self.invokeMsgRenderer();
+                            }
+
+                        }
+                    });
+                };
+                f(arr[i]);
+            }
+
+        },
+        invokeMsgRenderer: function() {
+            if (paused) {
+                return;
+            }
+
+            if (this.eventQueue.size() > 0) {
+                var obj = this.eventQueue.dequeue();
+                msgRenderer.render(msgRenderer.ownCardId, obj[0], obj[1]);
+                // if token id is the start tokenId, restart and call total tokens again.
+                if (obj[0] == this.startTokenId) {
+                    var self = this;
+                    setTimeout(function () {self.start();}, 3000);
+                } else {
+                    // queue more if the queue size goes below 5. 
+                    if (this.eventQueue.size() < 5 && this.tokens.length > 0) {
+                        this.queueGraffiti();
+                    }
+                }
+            } else {
+                this.queueGraffiti();
+            }
+        }
+    }
+
+    // A simple queue implementation.    
+    function Queue() {
+        this._oldestIndex = 1;
+        this._newestIndex = 1;
+        this._storage = {};
+    }
+
+    Queue.prototype.size = function() {
+        return this._newestIndex - this._oldestIndex;
+    };
+
+    Queue.prototype.enqueue = function(data) {
+        this._storage[this._newestIndex] = data;
+        this._newestIndex++;
+    };
+
+    Queue.prototype.dequeue = function() {
+        var oldestIndex = this._oldestIndex,
+            newestIndex = this._newestIndex,
+            deletedData;
+
+        if (oldestIndex !== newestIndex) {
+            deletedData = this._storage[oldestIndex];
+            delete this._storage[oldestIndex];
+            this._oldestIndex++;
+
+            return deletedData;
+        }
+    };
+    </script>
+
+</body>
+
+</html>
