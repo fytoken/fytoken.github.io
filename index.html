@@ -362,6 +362,23 @@ html {
     <div class="w3-container w3-center w3-dark-grey" style="padding:50px 16px 128px 16px" id="buy">
         <h3>WRITE GRAFFITI ON THE BLOCKCHAIN</h3>
         <p class="w3-large">Choose a fuck that fits your needs</p>
+        <div class="w3-center w3-large" style="padding-top: 15px">
+                <p><a id="showVideo" href="javascript:void(0)" class="w3-button w3-black" onclick="document.getElementById('vimeo-modal').style.display='block'">Show How-To Video</a>
+        </div>
+        <div id="vimeo-modal" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-light-grey">
+                    <span onclick="document.getElementById('vimeo-modal').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>WRITE GRAFFITI</h2>
+                </header>
+                <div class="w3-container">
+                    <div style="padding:50.99% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/268401483" style="position:absolute;top:0;left:0;width:95%;height:95%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+        </div>
+        
         <div class="w3-row-padding" style="margin-top:64px">
             <div class="w3-third w3-section">
                 <div class="w3-khaki">
