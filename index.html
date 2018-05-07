@@ -8,7 +8,7 @@
 <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="assets/css/message-loader.css" />
+<link rel="icon" href="assets/images/FYT.png">
 <style>
 body,
 h1,
@@ -789,7 +789,8 @@ html {
         } else {
             console.log('No web3? You should consider trying MetaMask!')
             // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-            web3js = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+            //web3js = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"));
+            web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/cJFPC6IIZnxP4KCjmB3A"))
         }
         userAccount = web3js.eth.accounts[0];
         // Check if account has changed and update it periodically
@@ -797,7 +798,7 @@ html {
             if (web3js.eth.accounts[0] !== userAccount) {
                 userAccount = web3js.eth.accounts[0];
             }
-        }, 1000);
+        }, 2000);
 
         startApp();
 
@@ -1247,10 +1248,27 @@ html {
                             "type": "function"
                         }
                     ]);
-        window.TokenInstance = contract.at('0x1fa48dd53f8300425f57621cf7b50d232e35e880'); // rinkeby
+        setTokenInstance(contract);
         msgRenderer.init();
         eventQueuer.init();
         ownTokenGraffitiQueuer.init();
+    }
+
+    function setTokenInstance(contract) {
+        window.TokenInstance = contract.at('0x682fF6b8746e182DA0efDE513C06235E5efb6cED');
+        web3js.version.getNetwork((err, netId) => {
+          switch (netId) {
+            case "3":
+              window.TokenInstance = contract.at('0x91E881307Bc6ff429B29C6320294899D58f0bE5c'); // ropsten
+              break
+            case "4":
+              window.TokenInstance = contract.at('0x1fa48dd53f8300425f57621cf7b50d232e35e880'); // rinkeby
+              break
+            case "1":
+            default:
+              console.log('TokenInstance set to main contract address');
+          }
+        });
     }
 
     function fYou() {
@@ -1258,7 +1276,7 @@ html {
         console.log(`From: ${web3js.eth.accounts[0]}`);
         var tx = TokenInstance.fYou.sendTransaction(getAddress(theForm.elements[2].value), theForm.elements[0].value, theForm.elements[1].value, {
             from: userAccount,
-            gas: 1000000,
+            gas: 500000,
             gasPrice: web3js.toWei('2', 'gwei'),
             value: web3js.toWei('1', 'finney')
         }, function(err, resp) {
@@ -1293,7 +1311,7 @@ html {
         
         var tx = TokenInstance.paintGraffiti.sendTransaction(theForm.elements[0].value, theForm.elements[1].value, theForm.elements[2].value, {
                 from: userAccount,
-                gas: 1000000,
+                gas: 500000,
                 gasPrice: web3js.toWei('2', 'gwei')
             }, function(err, resp) {
                 if (err) {
